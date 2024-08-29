@@ -2,11 +2,11 @@ import './App.css';
 import React, { useState } from 'react';
 
 function App() {
- // Estado para armazenar as tarefas
+ // Teste Estado para armazenar as tarefas
  const [tarefas, setTarefas] = useState([]);
  const [novaTarefa, setNovaTarefa] = useState('');
 
- // Função para adicionar uma nova tarefa
+ // Teste  Função para adicionar uma nova tarefa
  const adicionarTarefa = () => {
    if (novaTarefa.trim() !== '') {
      setTarefas([...tarefas, { texto: novaTarefa, concluida: false }]);
@@ -14,14 +14,14 @@ function App() {
    }
  };
 
- // Função para marcar tarefa como concluída
+ // TESTEFunção para marcar tarefa como concluída
  const marcarComoConcluida = (index) => {
    const novasTarefas = [...tarefas];
    novasTarefas[index].concluida = !novasTarefas[index].concluida;
    setTarefas(novasTarefas);
  };
 
- // Função para remover uma tarefa
+ // TESTEFunção para remover uma tarefa
  const removerTarefa = (index) => {
    const novasTarefas = tarefas.filter((_, i) => i !== index);
    setTarefas(novasTarefas);
